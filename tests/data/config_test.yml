@@ -1,0 +1,6 @@
+app:
+  profile: ${PROFILE}
+
+test:
+  var: ${TEST_VAL}
+  var_def: ${TEST_MISSING|default}

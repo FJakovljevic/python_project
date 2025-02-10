@@ -1,0 +1,54 @@
+[tool.pytest.ini_options]
+addopts = "--cov --cov-report term-missing"
+
+[tool.codespell]
+ignore-regex = 'https://([\w/\.])+'
+
+[tool.ruff]
+line-length = 130
+exclude = [".venv", ".conda", "tests"]
+
+[tool.ruff.format]
+docstring-code-format = true
+
+[tool.ruff.lint]
+preview = true
+select = [
+    "F",        # pyflakes
+    "E", "W",   # pycodestyle errors and warnings
+    "I",        # import checks
+    "N",        # naming checks
+    "D",        # docstrings checks
+    "ANN",      # annotations checks
+    "ASYNC",    # async checks
+    "B",        # bugbear checks
+    "A",        # builtin shadowing checks
+    "COM",      # trailining comma checks
+    "C4",       # comperhension checks
+    "DTZ",      # datetime checks
+    "ISC",      # implicit string concatenation checks
+    "ICN",      # import conventions checks
+    "LOG",      # logger checks
+    "PIE",      # pie (misc lints) checks
+    "PYI",      # pyi checks
+    "Q",        # quotes checks
+    "RET",      # return checks
+    "SIM",      # simplify checks
+    "ARG",      # arguments checks
+    "PL",       # pylint checks
+    "FAST",     # fast api checks
+    "RUF",      # ruff specific checks
+    "T20",      # found print checks
+]
+ignore = [
+    "D100",     # module docstring
+    "D101",     # class docstring
+    "D104",     # package docstring
+    "D105",     # special functions docstring
+    "D107",     # __init__ docstring
+    "D203",     # one-blank-line-before-class
+    "D213",     # multi-line-summary-second-line
+    "ANN101",   # cls annotation
+    "ANN102",   # self annotation
+    "ANN204",   # special methods return annotation
+]
